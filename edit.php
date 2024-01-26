@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form Pendaftaran Siswa</title>
     <script>
         function validateInput() {
@@ -230,8 +232,10 @@
                 <textarea name="alamat" class="form-control" rows="5" placeholder="Masukan Alamat" required><?php echo $data["alamat"]; ?></textarea>
             </div>
             <input type="hidden" name="id_peserta" value="<?php echo $data['id_peserta']; ?>" />
-            <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
-            <a href="index.php" type="submit" class="btn btn-primary">Batal</a>
+            <div class="mb-3">
+                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+                <a href="index.php" type="submit" class="btn btn-primary">Batal</a>
+            </div>
         </form>
     </div>
 </body>
