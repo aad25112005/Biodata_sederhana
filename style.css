@@ -1,0 +1,86 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background: white
+}
+
+table{
+    margin: 15px;
+}
+table tr th{
+    background: rgb(83, 81, 79);
+    color: aliceblue;
+}
+table tr:hover{
+    background: rgb(3, 211, 218);
+    color: rgb(198, 127, 27);
+    transition: 0.6s;
+}
+
+.header{
+    text-align: none;
+    background-color: rgb(83, 81, 79);
+    height: 3.5rem;
+    width: 100%;
+}
+.header h2{
+    padding: 10px ;
+    color: black;
+    font: 2em sans-serif;
+}
+
+table tr th,
+table tr td{
+    padding: 7px 4px;
+    text-align: center;
+}
+
+.cari{
+    margin: 10px 10px;
+    position: absolute;
+    background-color: transparent;
+}
+.cari button{
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    border-radius: 150vh;
+}
+.cari button:hover{
+    background-color: wheat;
+    box-shadow: 0 2px 10px blue;
+    transition: 0.6s;
+}
+.cari input{
+    width: 280px;
+    height: 30px;
+    border-radius: 100vh;
+}
+.cari input:hover{
+    background-color:wheat;
+    box-shadow: 0 2px 10px blue;
+    transition: 0.6s;
+}
+
+.cari button:active{
+    background-color: rgb(26, 255, 0);
+    color: salmon;
+}
+
+input{
+    text-decoration: double;
+}
+
+.table-danger{
+    overflow: auto;
+    width: 70% auto;
+    size: 40% auto;
+    display: flex;
+}
+
+#tambah{
+    margin: 15px;
+}
