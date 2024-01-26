@@ -7,8 +7,16 @@ body{
     background: white
 }
 
-table{
-    margin: 15px;
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }
 table tr th{
     background: rgb(83, 81, 79);
@@ -37,30 +45,7 @@ table tr td{
     padding: 7px 4px;
     text-align: center;
 }
-
-.cari{
-    margin: 10px 10px;
-    position: absolute;
-    background-color: transparent;
-}
-.cari button{
-    font-size: 16px;
-    height: 30px;
-    width: 30px;
-    border-radius: 150vh;
-}
-.cari button:hover{
-    background-color: wheat;
-    box-shadow: 0 2px 10px blue;
-    transition: 0.6s;
-}
-.cari input{
-    width: 280px;
-    height: 30px;
-    border-radius: 100vh;
-}
 .cari input:hover{
-    background-color:wheat;
     box-shadow: 0 2px 10px blue;
     transition: 0.6s;
 }
@@ -79,8 +64,4 @@ input{
     width: 70% auto;
     size: 40% auto;
     display: flex;
-}
-
-#tambah{
-    margin: 15px;
-}
+}   
