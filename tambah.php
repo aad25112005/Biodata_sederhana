@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form Pendaftaran Siswa</title>
     <script>
         function validateInput() {
@@ -17,6 +19,7 @@
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -115,28 +118,28 @@
         <h2 Align="center">Tambah Data</h2>
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" onsubmit="return validateInput()">
             <div class="form-group">
-                <label for="nisn">NISN:</label>
+                <label class="form-label" for="nisn">NISN:</label>
                 <input type="text" maxlength="10" id="nisn" name="nisn" class="form-control" placeholder="Masukan NISN" required />
             </div>
             <div class="form-group">
-                <label for="nama">Nama:</label>
+                <label class="form-label" for="nama">Nama:</label>
                 <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required />
             </div>
             <div class="form-group">
-                <label for="jk">Jenis Kelamin:</label><br>
+                <label class="form-label" for="jk">Jenis Kelamin:</label><br>
                 <input type="radio" name="jk" value="Laki-Laki">Laki-Laki
                 <input type="radio" name="jk" value="Perempuan">Perempuan
             </div>
             <div class="form-group">
-                <label for="tempat_lahir">Tempat Lahir:</label>
+                <label class="form-label" for="tempat_lahir">Tempat Lahir:</label>
                 <input type="text" name="tempat_lahir" class="form-control" placeholder="Masukan Tempat Lahir" required />
             </div>
             <div class="form-group">
-                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <label class="form-label" for="tanggal_lahir">Tanggal Lahir:</label>
                 <input type="date" name="tanggal_lahir" class="form-control" placeholder="Masukan Tanggal Lahir" required />
             </div>
             <div class="form-group">
-                <label for="agama">Agama:</label>
+                <label class="form-label" for="agama">Agama:</label>
                 <select name="agama" id="agama" class="form-control">
                     <option value="Islam">Islam</option>
                     <option value="Kristen Katolik">Kristen Katolik</option>
@@ -147,11 +150,11 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label class="form-label" for="email">Email:</label>
                 <input type="text" name="email" class="form-control" placeholder="Masukan Email" required />
             </div>
             <div class="form-group">
-                <label for="kelas">Kelas:</label>
+                <label class="form-label" for="kelas">Kelas:</label>
                 <select name="kelas" id="kelas" class="form-control">
                     <option value="X">X</option>
                     <option value="XI">XI</option>
@@ -159,7 +162,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="jurusan">Jurusan :</label>
+                <label class="form-label" for="jurusan">Jurusan :</label>
                 <select name="jurusan" id="jurusan" class="form-control">
                     <option value="PPLG">PPLG</option>
                     <option value="ULP">ULP</option>
@@ -170,11 +173,11 @@
             </div>
 
             <div class="form-group">
-                <label for="no_hp">No HP:</label>
+                <label class="form-label" for="no_hp">No HP:</label>
                 <input type="text" name="no_hp" class="form-control" placeholder="Masukan No HP" required />
             </div>
             <div class="form-group">
-                <label for="hobi">Hobi:</label><br>
+                <label class="form-label" for="hobi">Hobi:</label><br>
                 <input type="checkbox" name="hobi[]" value="Badminton" <?php if (isset($hobi) && in_array("Badminton", explode(", ", $hobi))) echo "checked"; ?> /> Badminton <br>
                 <input type="checkbox" name="hobi[]" value="Membaca" <?php if (isset($hobi) && in_array("Membaca", explode(", ", $hobi))) echo "checked"; ?> /> Membaca <br>
                 <input type="checkbox" name="hobi[]" value="Memasak" <?php if (isset($hobi) && in_array("Memasak", explode(", ", $hobi))) echo "checked"; ?> /> Memasak <br>
@@ -184,12 +187,13 @@
 
             </div>
             <div class="form-group">
-                <label for="alamat">Alamat:</label>
+                <label class="form-label" for="alamat">Alamat:</label>
                 <textarea name="alamat" class="form-control" rows="5" placeholder="Masukan Alamat" required></textarea>
             </div>
-
-            <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
-            <a href="index.php" type="submit" class="btn btn-primary">Batal</a>
+            <div class="mb-3">
+                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+                <a href="index.php" type="submit" class="btn btn-primary">Batal</a>
+            </div>
         </form>
     </div>
 
